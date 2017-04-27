@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="8dp"
+		android:orientation="vertical">
+		
+		<TextView
+			android:id="@+id/item_remind_text_view_title"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textSize="18sp"
+			tools:text="День рождения тети"
+			android:textColor="#353535"/>
+		
+		<TextView
+			android:id="@+id/item_remind_text_view_time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			tools:text="26 авг 2017 13.00" />
+	
+	</LinearLayout>
+	
+	<ImageView
+		android:id="@+id/item_remind_image_view_notification"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@android:drawable/btn_star_big_off"
+		android:layout_gravity="center|end"
+		android:layout_marginRight="16dp"/>
+</FrameLayout>
