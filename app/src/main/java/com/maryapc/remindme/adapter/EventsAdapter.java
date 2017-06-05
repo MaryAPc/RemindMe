@@ -20,7 +20,8 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsViewHolder> {
 	private OnItemClickListener mOnItemClickListener;
 
 	public interface OnItemClickListener {
-		void onItemClick(View view, int position);
+
+		void onItemClick(View view, int position, Event event);
 	}
 
 	public EventsAdapter(List<Event> events, OnItemClickListener listener) {
@@ -38,7 +39,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsViewHolder> {
 	@Override
 	public void onBindViewHolder(EventsViewHolder holder, int position) {
 		holder.bind(mEvents.get(position));
-		holder.itemView.setOnClickListener(view -> mOnItemClickListener.onItemClick(view, position));
+		holder.itemView.setOnClickListener(view -> mOnItemClickListener.onItemClick(view, position, holder.getEvent()));
 	}
 
 	@Override
@@ -59,5 +60,9 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsViewHolder> {
 		int positionStart = mEvents.size() + 1;
 		mEvents.add(event);
 		notifyItemChanged(positionStart);
+	}
+
+	public void deleteItem(int position) {
+		notifyItemRemoved(position);
 	}
 }

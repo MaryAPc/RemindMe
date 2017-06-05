@@ -1,20 +1,17 @@
 package com.maryapc.remindme.view;
 
-import java.util.List;
-
 import com.arellomobile.mvp.MvpView;
 import com.arellomobile.mvp.viewstate.strategy.AddToEndSingleStrategy;
 import com.arellomobile.mvp.viewstate.strategy.StateStrategyType;
-import com.maryapc.remindme.model.Event;
 
 @StateStrategyType(AddToEndSingleStrategy.class)
-public interface CurrentEventsView extends MvpView {
+public interface CreateRemindView extends MvpView {
 
-	void setEvents(List<Event> allEvents);
+	void showAlertDialog(String message);
 
-	void showEmptyList();
+	void showTimePickerDialog(int hour, int minute);
 
-	void showInfoToast(String message);
+	void showDatePickerDialog(int day, int month, int year);
 
-	void updateList(int position, int id);
+	void finishActivity();
 }

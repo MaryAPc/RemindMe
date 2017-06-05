@@ -5,11 +5,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.maryapc.remindme.MyApplication;
 import com.maryapc.remindme.R;
 import com.maryapc.remindme.model.Event;
-import com.maryapc.remindme.model.NotifyType;
-import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,20 +22,28 @@ public class EventsViewHolder extends RecyclerView.ViewHolder {
 	@BindView(R.id.item_remind_image_view_notification)
 	ImageView mNotifyImageView;
 
+	private Event mEvent;
+
+
 	public EventsViewHolder(View itemView) {
 		super(itemView);
 		ButterKnife.bind(this, itemView);
 	}
 
 	public void bind(Event event) {
-		Picasso.with(MyApplication.getInstance())
+		mEvent = event;
+		/*Picasso.with(MyApplication.getInstance())
 				.load(getImageNotify(event.getType()))
-				.into(mNotifyImageView);
+				.into(mNotifyImageView);*/
 		mTitleTextView.setText(event.getTitle());
-		mTimeTextView.setText(event.getDate());
+		mTimeTextView.setText(event.getTimeStamp());
 	}
 
-	private int getImageNotify(NotifyType type) {
+	public Event getEvent() {
+		return mEvent;
+	}
+
+	/*private int getImageNotify(String type) {
 		int res = 0;
 		switch (type) {
 			case NOTIFICATION:
@@ -52,5 +57,5 @@ public class EventsViewHolder extends RecyclerView.ViewHolder {
 				break;
 		}
 		return res;
-	}
+	}*/
 }

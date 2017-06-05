@@ -5,5 +5,6 @@ import com.arellomobile.mvp.viewstate.strategy.AddToEndSingleStrategy;
 import com.arellomobile.mvp.viewstate.strategy.StateStrategyType;
 
 @StateStrategyType(AddToEndSingleStrategy.class)
-public interface RemindView extends MvpView {
+public interface ActivityView extends MvpView {
+	void showCreateActivity();
 }

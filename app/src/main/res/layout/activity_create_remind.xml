@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	
+	<android.support.constraint.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		tools:context="com.maryapc.remindme.ui.CreateRemindActivity">
+		
+		<android.support.v7.widget.Toolbar
+			android:id="@+id/activity_create_remind_toolbar"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:background="?attr/colorPrimary"
+			android:minHeight="?attr/actionBarSize"
+			android:theme="?attr/actionBarTheme"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+		
+		
+		<TextView
+			android:id="@+id/activity_create_remind_text_view_name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/medium"
+			android:layout_marginStart="16dp"
+			android:layout_marginTop="@dimen/medium"
+			android:text="@string/remind_name"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/activity_create_remind_toolbar" />
+		
+		<EditText
+			android:id="@+id/activity_create_remind_edit_text_name"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginEnd="@dimen/medium"
+			android:layout_marginLeft="@dimen/medium"
+			android:layout_marginRight="@dimen/medium"
+			android:layout_marginStart="@dimen/medium"
+			android:layout_marginTop="@dimen/small"
+			app:layout_constraintHorizontal_bias="1.0"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/activity_create_remind_text_view_name" />
+		
+		<TextView
+			android:id="@+id/activity_create_remind_text_view_type"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/medium"
+			android:layout_marginStart="@dimen/medium"
+			android:layout_marginTop="@dimen/large"
+			android:text="@string/remind_type"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/activity_create_remind_edit_text_name" />
+		
+		<RadioButton
+			android:id="@+id/activity_create_remind_radio_button_notif"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/medium"
+			android:layout_marginStart="@dimen/medium"
+			android:layout_marginTop="@dimen/medium"
+			android:text="@string/notification"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/activity_create_remind_text_view_type" />
+		
+		
+		<RadioButton
+			android:id="@+id/activity_create_remind_radio_button_alarm"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/medium"
+			android:layout_marginStart="@dimen/medium"
+			android:layout_marginTop="@dimen/small"
+			android:text="@string/alarm"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/activity_create_remind_radio_button_notif" />
+		
+		<RadioButton
+			android:id="@+id/activity_create_remind_radio_button_widget"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/medium"
+			android:layout_marginStart="@dimen/medium"
+			android:layout_marginTop="@dimen/small"
+			android:text="@string/widget"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/activity_create_remind_radio_button_alarm" />
+		
+		<Button
+			android:id="@+id/activity_create_remind_button_time"
+			style="@style/Widget.AppCompat.Button.Borderless"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/medium"
+			android:layout_marginStart="@dimen/medium"
+			android:layout_marginTop="@dimen/medium"
+			android:text="@string/set_time"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/activity_create_remind_radio_button_widget"
+			tools:visibility="visible" />
+		
+		<Button
+			android:id="@+id/activity_create_remind_button_date"
+			style="@style/Widget.AppCompat.Button.Borderless"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/medium"
+			android:layout_marginStart="@dimen/medium"
+			android:layout_marginTop="@dimen/small"
+			android:text="@string/set_date"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/activity_create_remind_button_time"
+			tools:visibility="visible" />
+		
+		<TextView
+			android:id="@+id/activity_create_remind_text_view_time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/medium"
+			android:layout_marginStart="@dimen/medium"
+			android:layout_marginTop="@dimen/large"
+			android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/activity_create_remind_radio_button_widget"
+			tools:text="Время: 13.45"
+			tools:visibility="invisible" />
+		
+		<TextView
+			android:id="@+id/activity_create_remind_text_view_date"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/medium"
+			android:layout_marginStart="@dimen/medium"
+			android:layout_marginTop="31dp"
+			android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/activity_create_remind_text_view_time"
+			tools:text="Дата: 12.05.2017"
+			tools:visibility="invisible" />
+		
+		<Button
+			android:id="@+id/activity_create_remind_button_create"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="@dimen/medium"
+			android:layout_marginEnd="@dimen/medium"
+			android:layout_marginRight="@dimen/small"
+			android:layout_marginTop="@dimen/large"
+			android:text="@string/create"
+			android:textColor="@color/colorWhite"
+			android:theme="@style/Button"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/activity_create_remind_text_view_date" />
+	
+	</android.support.constraint.ConstraintLayout>
+</ScrollView>

@@ -1,3 +1,20 @@
 <resources>
 	<string name="app_name">Remind Me!</string>
+	<string name="no_events">Заметок нет!</string>
+	<string name="remind_name">Название напоминания:</string>
+	<string name="remind_type">Тип напоминания:</string>
+	<string name="notification">Уведомление</string>
+	<string name="alarm">Будильник</string>
+	<string name="widget">Виджет</string>
+	<string name="create">Создать</string>
+	<string name="alert_name">Введите название напоминания</string>
+	<string name="alert_type">Выберите тип напоминания</string>
+	<string name="alert_error">Ошибка!</string>
+	<string name="set_time">Установить время</string>
+	<string name="set_date">Установить дату</string>
+	<string name="alert_time">Не выбрано время</string>
+	<string name="alert_date">Не выбрана дата</string>
+	<string name="delete">delete</string>
+	<string name="edit">edit</string>
+	<string name="remind_was_deleted">Напоминание удалено</string>
 </resources>

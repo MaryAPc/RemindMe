@@ -5,17 +5,18 @@ import io.realm.annotations.Required;
 
 public class Event extends RealmObject {
 
-	@Required
 	private int id;
 
 	@Required
 	private String title;
 
 	@Required
-	private String date;
+	private String timeStamp;
 
 	@Required
 	private String type;
+
+	private boolean isDone;
 
 	public int getId() {
 		return id;
@@ -33,19 +34,27 @@ public class Event extends RealmObject {
 		this.title = title;
 	}
 
-	public String getDate() {
-		return date;
+	public String getTimeStamp() {
+		return timeStamp;
 	}
 
-	public void setDate(String date) {
-		this.date = date;
+	public void setTimeStamp(String timeStamp) {
+		this.timeStamp = timeStamp;
 	}
 
-	public NotifyType getType() {
-		return NotifyType.valueOf(type);
+	public String getType() {
+		return type;
 	}
 
-	public void setType(NotifyType val) {
-		this.type = val.toString();
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public boolean isDone() {
+		return isDone;
+	}
+
+	public void setDone(boolean done) {
+		isDone = done;
 	}
 }
